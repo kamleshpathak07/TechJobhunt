@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charSet="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Technical Career</title>
+    <meta name="author" content="techjobhunt" />
+    <meta property="og:url" content="https://techjobhunt.com/" />
+    <meta property="og:site_name" content="TechJobHunt" />
+    <meta property="og:title" content="Technical Career" />
+    <meta property="og:description" content="Discover technical job and support" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://img1.wsimg.com/isteam/stock/unaQxdNZD8SPyDV8E" />
+    <meta property="og:locale" content="en_IN" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="/images/tech_logo1.png" alt="Tech Jobs Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Tech Career</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="/contactus">Contact Us</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="#">Corporate Meme</a></li>
+
+                <li class="auth">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#login-modal-popup" class="btn btn-primary login-register-cls">Login/Register <i class="fas fa-sign-in-alt"></i></a>
+                    
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero">
+        @RenderBody()
+    </main>
+    <section class="why-choose-us">
+        <div class="choose-us-head">
+            <h2>Why Choose Us? <div class="face-think-icon"><i class="fa-solid fa-face-thinking"></i></div></h2>
+        </div>
+        <div class="why-choose-para">
+        <ul>
+                <li><div class="li-item-box"><strong>Wide range of tech job postings&nbsp; <i class="fa-regular fa-briefcase"></i></strong> Access a diverse array of job listings across various tech fields, ensuring that you find the perfect fit for your skills and career goals.</div></li>
+                <li><div class="li-item-box"><strong>Easy-to-use search filters&nbsp; <i class="fa-solid fa-filter"></i></strong> Utilize intuitive search filters to narrow down your job hunt by location, job type, experience level, and more.</div></li>
+                <li><div class="li-item-box"><strong>Connect directly with employers &nbsp;<i class="fa-solid fa-phone"></i></strong> Establish direct communication with potential employers, increasing your chances of landing your dream job.</div></li>
+                <li><div class="li-item-box"><strong>Career advice and resources &nbsp;<i class="fa-solid fa-graduation-cap"></i></strong> Benefit from expert career advice and resources to help you navigate your job search and career development.</div></li>
+        </ul>
+        </div>
+    </section>
+    @await Html.PartialAsync("_LoginPartial")
+    <section class="browse-section">
+        <h1>Browse Jobs & Companies</h1>
+        <div class="browse-filters">
+            <button>Job Title</button>
+            <button>Data, AI & ML</button>
+            <button>Skills</button>
+            <button>Popular Searches</button>
+            <button>Category</button>
+            <button>Top Companies</button>
+        </div>
+        <div class="job-lists">
+            <div class="job-column">
+                <a href="#">.NET Developer</a>
+                <a href="#">Business Analyst</a>
+                <a href="#">Cyber Security Analyst</a>
+                <a href="#">Data Scientist</a>
+                <a href="#">DevOps Engineer</a>
+                <a href="#">Full Stack Developer</a>
+                <a href="#">Game Developer</a>
+            </div>
+            <div class="job-column">
+                <a href="#">IT help desk</a>
+                <a href="#">IT Support</a>
+                <a href="#">Network Administrator</a>
+                <a href="#">Network Engineer</a>
+                <a href="#">Product Manager</a>
+                <a href="#">Program Manager</a>
+                <a href="#">Project Management</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Project Manager</a>
+                <a href="#">QA Tester</a>
+                <a href="#">Quality Analyst</a>
+                <a href="#">Salesforce Developer</a>
+                <a href="#">Scrum Master</a>
+                <a href="#">SDET</a>
+                <a href="#">SEO jobs</a>
+            </div>
+            <div class="job-column">
+                <a href="#">SOC Analyst</a>
+                <a href="#">Software Developer</a>
+                <a href="#">Software Engineer</a>
+                <a href="#">Solution Architect</a>
+                <a href="#">Systems Administrator</a>
+                <a href="#">Tech Sales</a>
+                <a href="#">Web Developer</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright &copy; 2024-2025 TechJobhunt. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,555 @@
+﻿body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: black;
+}
+
+    header img {
+        width: 72px;
+        height: auto;
+        background: cornsilk;
+        border-radius: 6px;
+    }
+    
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-left: 66px;
+}
+
+nav li {
+    margin-right: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: floralwhite;
+    font-size: 17px;
+    font-family: ui-sans-serif;
+}
+
+/*main {
+    padding: 2rem;
+}*/
+/*main {
+    padding: 2rem;*/ /* Maintained for potential content padding */
+    /*min-height: calc(100vh - (header.offsetHeight + footer.offsetHeight));*/ /* Set minimum height to fill remaining viewport space */
+    /*background-color: #083344;*/ /* Added background color */
+    /*display: flex;*/ /* Added for vertical centering */
+    /*flex-direction: column;*/ /* Added for vertical centering */
+    /*justify-content: center;*/ /* Center content vertically */
+    /*align-items: center;*/ /* Center content horizontally */
+/*}*/
+main.hero {
+    padding: 2rem;
+    min-height: calc(100vh - (header.offsetHeight + footer.offsetHeight));
+    background-image: url("/images/search_bar_bg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+    main h2 {
+        margin-bottom: 1rem;
+    }
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: rgb(51, 51, 51);
+    font-style: oblique;
+    font-family: sans-serif;
+}
+    main form {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+    }
+
+    main label {
+        flex-basis: 30%;
+        padding-right: 1rem;
+    }
+
+    main input[type="text"] {
+        flex-basis: 70%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+    }
+
+    main button {
+        background-color: #333;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        cursor: pointer;
+    }
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: #f2f2ec;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.why-choose-us {
+    background-color: rgb(37 15 55 / 85%);
+    padding: 40px 20px;
+    height: 390px;
+}
+
+    .why-choose-us ul {
+        list-style-type: none;
+        padding: 18px;
+        display: flex;
+    }
+
+    .why-choose-us li {
+        padding: 13px;
+        text-align: left;
+        margin: 18px 0;
+        font-family: 'Font Awesome 5 Free';
+    }
+    .why-choose-us strong {
+        display: block;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+.auth {
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+}
+
+    .auth i {
+        margin-left: 0.5rem;
+        font-size: 1rem;
+    }
+.benefits {
+    list-style: none; /* Removed default dot for list items */
+    padding: 0;
+    margin: 1rem 0;
+}
+
+    .benefits li {
+        margin-bottom: 0.5rem; /* Add some space between list items */
+        font-family: Arial, sans-serif; /* Change font to Arial or a preferred font */
+    }
+.search-box {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+    .search-box label {
+        flex-basis: 30%;
+        padding-right: 1rem;
+    }
+
+    .search-box input[type="text"] {
+        flex-basis: 65%;
+        padding: 0.5rem;
+        height: 25px;
+        width: 315px;
+    }
+.search-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #4b18217d;
+    box-shadow: inset 0px 1px 2px 0px;
+    min-width: min-content;
+    min-height: 255px;
+}
+    .search-box p {
+        margin-bottom: 2rem; /* Increased spacing between heading and search box */
+        font-size: 1rem;
+    }
+
+.job-search-cls {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 110px;
+}
+
+    .job-search-cls i {
+        margin-right: 8px;
+        color: #999;
+    }
+
+    .job-search-cls input {
+        border: none;
+        outline: none;
+        flex: 1;
+        padding: 5px;
+    }
+
+.job-sbm-btn {
+    background-color: #1d010570;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 419px;
+    margin-top: 70px;
+    height: 40px;
+    width: 220px;
+}
+
+    .job-sbm-btn:hover {
+        background-color: #0056b3;
+    }
+body {
+    font-family: Arial, sans-serif;
+}
+
+.browse-section {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+    .browse-section h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+        .browse-section h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: red;
+            margin: 10px auto 0;
+        }
+
+.browse-filters {
+    margin-bottom: 20px;
+}
+
+    .browse-filters button {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 15px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+        .browse-filters button:hover {
+            background-color: #0056b3;
+        }
+
+.job-lists {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.job-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    display: grid;
+    margin-left: 63px;
+    text-align: -webkit-left;
+}
+
+    .job-column a {
+        display: block;
+        color: #0e7490;
+        text-decoration: none;
+        margin: 5px 0;
+        font-size: 1em;
+    }
+
+        .job-column a:hover {
+            text-decoration: underline;
+        }
+.choose-us-head {
+    color: #39f800;
+    text-align: center;
+    font-family: "Sofia", sans-serif;
+    font-size: 20px;
+    text-shadow: 0px 0px 0px #ababab;
+}
+.why-choose-para {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 60px;
+    position: absolute;
+}
+.li-item-box {
+    height: 230px;
+    width: 104%;
+    border: 1px solid aliceblue;
+    line-height: 1.5;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: -3px 0px 11px 3px black;
+    border-radius: 16px;
+    padding: 30px;
+    float: left;
+    position: relative;
+}
+
+.face-think-icon::after {
+    content: "\1F914"; /* Unicode for thinking face emoji */
+    font-family: "Font Awesome 5 Free"; /* Ensures emoji rendering */
+    font-size: 24px; /* Adjust the size as needed */
+    margin-right: 8px; /* Space between emoji and text */
+}
+.face-think-icon {
+    display: inline-flex;
+    padding-left: 4px;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 37%;
+}
+a.btn.btn-primary.login-register-cls {
+    background-color: cornsilk;
+    color: black;
+    font-family: serif;
+}
+
+.modal-content.login-body-cls {
+    width: 530px;
+    min-height: max-content;
+    background: #8b6060;
+    margin-top: 110px;
+}
+.modal-footer {
+    display: flex;
+    position: relative;
+    border: none;
+}
+
+button.btn.btn-primary {
+    background: black;
+    border: none;
+}
+
+.modal-header.login-header {
+    border: none;
+    font-family: 'sans serif';
+    color: aquamarine;
+}
+
+h5#exampleModalLabel {
+    text-align: center;
+    padding-left: 45px;
+    font-size: xx-large;
+}
+label.col-form-label {
+    color: aquamarine;
+    font-family: fangsong;
+    padding-left: 8px;
+    font-size: 20px;
+}
+
+
+button.btn-close.close-login-btn {
+    /* background: white; */
+    position: relative;
+    padding-left: 60px;
+    border: 1px solid black;
+    width: inherit;
+    border-radius: 10px;
+    box-shadow: 0px 1px;
+}
+.submit-login-btn {
+    width: -webkit-fill-available;
+    display: flex;
+    height: 49px;
+    padding-left: 160px;
+    /* margin-left: 182px; */
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-content: flex-end;
+}
+
+.login-para-footer {
+    position: relative;
+    padding-right: 225px;
+    font-family: serif;
+    color: black;
+    font-size: 18px;
+}
+
+.modal-footer {
+    border: none;
+}
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+.login-para-footer {
+    padding-right: 154px;
+    display: flex;
+}
+    .login-para-footer a {
+        text-decoration: underline;
+        padding-left: 11px;
+        color: blanchedalmond;
+    }
+.aboutus-content {
+    min-width: -webkit-fill-available;
+    display: flex;
+    text-align: justify;
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: justify;
+    margin-right: 0px;
+}
+
+.about-container {
+    text-align: justify;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    /* min-width: -webkit-fill-available; */
+    margin-top: 60px;
+    width: 1033px;
+    margin-left: 94px;
+    border: 1px solid black;
+    padding: 0px;
+    /* margin: auto; */
+    margin-bottom: 52px;
+    box-shadow: -1px -1px 20px 2px;
+    background: var(--bs-border-color);
+}
+
+    .about-container p {
+        text-align: justify;
+        padding-left: 110px;
+        text-align: justify;
+        padding-right: 80px;
+    }
+
+.aboutus-content ul {
+    list-style-type: none;
+    padding-left: 0px;
+    line-height: 1.5;
+}
+
+.aboutus-content h3 {
+    font-size: 24px;
+    color: black;
+    margin-left: 110px;
+}
+
+.about-container h2 {
+    font-size: 40px;
+    font-weight: revert-layer;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 20px;
+    padding-top: 28px;
+}
+
+main.hero-section-cls {
+    /* background: #0b20361a; */
+    width: -webkit-fill-available;
+}
