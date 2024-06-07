@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -11,11 +11,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\BatchJob\Data\" />
+    <Folder Include="Areas\BatchJob\Models\" />
+    <Folder Include="Areas\TechDocumet\Controllers\" />
+    <Folder Include="Areas\TechDocumet\Data\" />
+    <Folder Include="Areas\TechDocumet\Models\" />
+    <Folder Include="Areas\TechDocumet\Views\" />
     <Folder Include="Controllers\" />
     <Folder Include="Data\" />
     <Folder Include="Models\" />
-    <Folder Include="wwwroot\images\" />
-    <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\css\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\js\" />

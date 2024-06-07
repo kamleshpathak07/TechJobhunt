@@ -19,6 +19,8 @@
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet" />
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/main.js"></script>
 </head>
 <body>
     <header>
@@ -31,7 +33,7 @@
                 <li><a href="/aboutus">About Us</a></li>
                 <li><a href="/contactus">Contact Us</a></li>
                 <li><a href="/privacy-policy">Privacy Policy</a></li>
-                <li><a href="#">Corporate Meme</a></li>
+                <li><a href="corporatememe">Corporate Meme</a></li>
 
                 <li class="auth">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#login-modal-popup" class="btn btn-primary login-register-cls">Login/Register <i class="fas fa-sign-in-alt"></i></a>
@@ -60,14 +62,14 @@
     <section class="browse-section">
         <h1>Browse Jobs & Companies</h1>
         <div class="browse-filters">
-            <button>Job Title</button>
-            <button>Data, AI & ML</button>
-            <button>Skills</button>
-            <button>Popular Searches</button>
-            <button>Category</button>
-            <button>Top Companies</button>
+            <button onclick="showCategory('job-lists')">Job Title</button>
+            <button onclick="showCategory('category-ai')">Data, AI & ML</button>
+            <button onclick="showCategory('category-skills')">Skills</button>
+            <button onclick="showCategory('category-popular-Searches')">Popular Searches</button>
+            <button onclick="showCategory('category-DomainCatagory')">Category</button>
+            <button onclick="showCategory('category-TopComnay')">Top Companies</button>
         </div>
-        <div class="job-lists">
+        <div class="job-lists catagory-list-data active" id="job-lists">
             <div class="job-column">
                 <a href="#">.NET Developer</a>
                 <a href="#">Business Analyst</a>
@@ -103,6 +105,114 @@
                 <a href="#">Systems Administrator</a>
                 <a href="#">Tech Sales</a>
                 <a href="#">Web Developer</a>
+            </div>
+        </div>
+        <div class="category-ai catagory-list-data" id="category-ai">
+            <div class="job-column">
+                <a href="#">Artificial Intelligence</a>
+                <a href="#">Embedded System</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Machine Learning</a>
+                <a href="#">Chatgpt</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Data Science</a>
+            </div>
+            <div class="job-column">
+                <a href="#">IOT</a>
+            </div>
+        </div>
+        <div class="category-skills catagory-list-data" id="category-skills">
+            <div class="job-column">
+                <a href="#">C#</a>
+                <a href="#">.NET Framework</a>
+                <a href="#">.NET Core</a>
+                <a href="#">Entity Framework</a>
+            </div>
+            <div class="job-column">
+                <a href="#">C</a>
+                <a href="#">C++</a>
+                <a href="#">OOps</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Java</a>
+                <a href="#">Spring Framework</a>
+                <a href="#">Advanced Java</a>
+            </div>
+            <div class="job-column">
+                <a href="#">React JS</a>
+                <a href="#">Angular JS</a>
+                <a href="#">TypeScript</a>
+            </div>
+        </div>
+        <div class="category-popular-Searches catagory-list-data" id="ategory-popular-Searches">
+            <div class="job-column">
+                <a href="#">Master Data Structure</a>
+                <a href="#">Full Stack Development</a>
+                <a href="#">Use Chatgpt</a>
+                <a href="#">SDLC Model</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Github Use</a>
+                <a href="#">Git Control System</a>
+                <a href="#">React Framework</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Software Engineering</a>
+                <a href="#">AI World</a>
+                <a href="#">Advanced Java</a>
+            </div>
+            <div class="job-column">
+                <a href="#">React JS</a>
+                <a href="#">Angular JS</a>
+                <a href="#">TypeScript</a>
+            </div>
+        </div>
+        <div class="category-DomainCatagory catagory-list-data" id="category-DomainCatagory">
+            <div class="job-column">
+                <a href="#">Software Engineering</a>
+                <a href="#">BioTech Engineering</a>
+                <a href="#">Support Engineer </a>
+                <a href="#">Network Engineer</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Mechanical Engineering</a>
+                <a href="#">Civil Engineering</a>
+                <a href="#">Electrical/Electronics</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Risk Analyst</a>
+                <a href="#">CA</a>
+                <a href="#">Bussiness Analyst</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Public Administration</a>
+                <a href="#">Finanace Management</a>
+                <a href="#">HR Management</a>
+            </div>
+        </div>
+        <div class="category-TopComnay catagory-list-data" id="category-TopComnay">
+            <div class="job-column">
+                <a href="#">Google</a>
+                <a href="#">Facebook</a>
+                <a href="#">Atlassian </a>
+                <a href="#">Wipro</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Microsoft</a>
+                <a href="#">HCL</a>
+                <a href="#">TCS</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Apple</a>
+                <a href="#">Meta</a>
+                <a href="#">Swiggy</a>
+            </div>
+            <div class="job-column">
+                <a href="#">Zomato</a>
+                <a href="#">Netflix</a>
+                <a href="#">JioCinema</a>
             </div>
         </div>
     </section>
