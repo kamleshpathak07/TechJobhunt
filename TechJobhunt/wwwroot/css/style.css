@@ -554,7 +554,7 @@ main.hero-section-cls {
     width: -webkit-fill-available;
 }
 
-@media(min-width:1186px) {
+
     .about-container {
         text-align: justify;
         font-size: 15px;
@@ -577,7 +577,7 @@ main.hero-section-cls {
         justify-content: flex-start;
         align-items: center;
         padding: 1rem 3rem;
-        background-color: black;
+        /*background-color: black;*/
     }
 
     nav li {
@@ -629,23 +629,22 @@ main.hero-section-cls {
     }
 
     about-container conatct-containers {
-
-    text-align: justify;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    min-width: -webkit-fill-available;
-    margin-top: 60px;
-    width: 1033px;
-    margin-left: 310px;
-    border: 1px solid black;
-    padding: 0px;
-    margin: auto;
-    margin-bottom: 52px;
-    box-shadow: -1px -1px 20px 2px;
-    background: rgba(255, 255, 255, 0.15);
-
+        text-align: justify;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        min-width: -webkit-fill-available;
+        margin-top: 60px;
+        width: 1033px;
+        margin-left: 310px;
+        border: 1px solid black;
+        padding: 0px;
+        margin: auto;
+        margin-bottom: 52px;
+        box-shadow: -1px -1px 20px 2px;
+        background: rgba(255, 255, 255, 0.15);
     }
+
     .about-container h2 {
         font-size: 40px;
         font-weight: revert-layer;
@@ -653,6 +652,7 @@ main.hero-section-cls {
         padding-bottom: 20px;
         padding-top: 28px;
     }
+
     main.hero-section-cls {
         background: #2a0a08;
         width: -webkit-fill-available;
@@ -661,7 +661,6 @@ main.hero-section-cls {
         margin-top: 28px;
     }
 
-}
 /*--------------------------Enquiry Form Css------------------------------*/
 
 
@@ -803,4 +802,17 @@ textarea {
 
     .catagory-list-data.active {
         display: flex;
+    }
+@media(max-width:1517px) {
+    nav li {
+        margin-right: 3rem;
+    }
+
+    main.hero-section-cls {
+        /*background: #2a0a08;*/
+        width: -webkit-fill-available;
+        margin-right: 65px;
+        margin-top: 28px;
+    }
+}
     }
