@@ -6,20 +6,17 @@
 <h1>Find Your Dream Tech Job</h1>
 <div class="search-box">
 <p>Search for exciting opportunities in the tech industry.</p>
-<form action="#">
-
+    <form action="#">
         <div class="job-search-cls">
             <i class="fas fa-search"></i>
             <input type="text" id="job-title" name="job-title" placeholder="e.g. Software Engineer">
+            <div id="job-title-suggestions" class="autocomplete-suggestions"></div>
         </div>
         <div class="job-search-cls">
             <i class="fas fa-map-marker-alt"></i>
             <input type="text" id="location" name="location" placeholder="e.g. New York, NY">
+            <div id="location-suggestions" class="autocomplete-suggestions"></div>
         </div>
         <button type="submit" class="job-sbm-btn">Search Jobs</button>
-@*     <input type="text" id="keyword" name="keyword" placeholder="enter job type,skill or company...">
-   
-    <input type="text" id="location" name="location" placeholder="enter location...">
-    <button type="submit">Search</button> *@
-</form>
+    </form>
 </div>

@@ -653,13 +653,13 @@ main.hero-section-cls {
         padding-top: 28px;
     }
 
-    main.hero-section-cls {
-        background: #2a0a08;
-        width: -webkit-fill-available;
-        width: 1399px;
-        margin-left: 105px;
-        margin-top: 28px;
-    }
+main.hero-section-cls {
+    /*background: #2a0a08;*/
+    width: -webkit-fill-available;
+    width: 1399px;
+    margin-left: 105px;
+    margin-top: 28px;
+}
 
 /*--------------------------Enquiry Form Css------------------------------*/
 
@@ -815,4 +815,110 @@ textarea {
         margin-top: 28px;
     }
 }
+
+/*------------------------- AutoSuggetion CSS---------------------------*/
+
+/* Container for the search input fields and icons */
+.job-search-cls {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+    /* Style the input fields */
+    .job-search-cls input {
+        width: 100%;
+        padding: 10px;
+        padding-left: 40px; /* Space for the icon */
+        box-sizing: border-box;
     }
+
+    /* Style the icons */
+    .job-search-cls i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+    }
+
+/* Style the suggestions dropdown */
+.autocomplete-suggestions {
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: #717b8a;
+    z-index: 1000;
+    width: calc(100% - 20px); /* Match input width minus padding */
+    top: 100%; /* Position below the input field */
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Style individual suggestion items */
+.autocomplete-suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+    /* Highlight suggestion items on hover */
+    .autocomplete-suggestion:hover {
+        background-color: #f0f0f0;
+    }
+
+/* Style the search button */
+.job-sbm-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .job-sbm-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Roadmap section styles */
+.roadmap {
+    padding: 20px;
+}
+
+.stage {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+    .stage h2 {
+        background: #0044cc;
+        color: #fff;
+        padding: 10px;
+        margin: 0 -15px;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .stage ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .stage li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+        .stage li:last-child {
+            border-bottom: none;
+        }
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .stage h2 {
+        font-size: 1.2em;
+    }
+}
