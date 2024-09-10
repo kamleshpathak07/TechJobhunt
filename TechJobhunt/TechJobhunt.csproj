@@ -7,19 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\TechDocumet\**" />
+    <Content Remove="Areas\TechDocumet\**" />
+    <EmbeddedResource Remove="Areas\TechDocumet\**" />
+    <None Remove="Areas\TechDocumet\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\BatchJob\Data\" />
     <Folder Include="Areas\BatchJob\Models\" />
-    <Folder Include="Areas\TechDocumet\Controllers\" />
-    <Folder Include="Areas\TechDocumet\Data\" />
-    <Folder Include="Areas\TechDocumet\Models\" />
-    <Folder Include="Areas\TechDocumet\Views\" />
     <Folder Include="Controllers\" />
     <Folder Include="Data\" />
     <Folder Include="Models\" />
+    <Folder Include="TechRepository\TRDataAccess\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\css\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\js\" />

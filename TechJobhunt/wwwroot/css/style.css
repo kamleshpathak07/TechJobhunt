@@ -554,7 +554,7 @@ main.hero-section-cls {
     width: -webkit-fill-available;
 }
 
-@media(min-width:1186px) {
+
     .about-container {
         text-align: justify;
         font-size: 15px;
@@ -577,7 +577,7 @@ main.hero-section-cls {
         justify-content: flex-start;
         align-items: center;
         padding: 1rem 3rem;
-        background-color: black;
+        /*background-color: black;*/
     }
 
     nav li {
@@ -629,23 +629,22 @@ main.hero-section-cls {
     }
 
     about-container conatct-containers {
-
-    text-align: justify;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    min-width: -webkit-fill-available;
-    margin-top: 60px;
-    width: 1033px;
-    margin-left: 310px;
-    border: 1px solid black;
-    padding: 0px;
-    margin: auto;
-    margin-bottom: 52px;
-    box-shadow: -1px -1px 20px 2px;
-    background: rgba(255, 255, 255, 0.15);
-
+        text-align: justify;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        min-width: -webkit-fill-available;
+        margin-top: 60px;
+        width: 1033px;
+        margin-left: 310px;
+        border: 1px solid black;
+        padding: 0px;
+        margin: auto;
+        margin-bottom: 52px;
+        box-shadow: -1px -1px 20px 2px;
+        background: rgba(255, 255, 255, 0.15);
     }
+
     .about-container h2 {
         font-size: 40px;
         font-weight: revert-layer;
@@ -653,15 +652,15 @@ main.hero-section-cls {
         padding-bottom: 20px;
         padding-top: 28px;
     }
-    main.hero-section-cls {
-        background: #2a0a08;
-        width: -webkit-fill-available;
-        width: 1399px;
-        margin-left: 105px;
-        margin-top: 28px;
-    }
 
+main.hero-section-cls {
+    /*background: #2a0a08;*/
+    width: -webkit-fill-available;
+    width: 1399px;
+    margin-left: 105px;
+    margin-top: 28px;
 }
+
 /*--------------------------Enquiry Form Css------------------------------*/
 
 
@@ -804,3 +803,122 @@ textarea {
     .catagory-list-data.active {
         display: flex;
     }
+@media(max-width:1517px) {
+    nav li {
+        margin-right: 3rem;
+    }
+
+    main.hero-section-cls {
+        /*background: #2a0a08;*/
+        width: -webkit-fill-available;
+        margin-right: 65px;
+        margin-top: 28px;
+    }
+}
+
+/*------------------------- AutoSuggetion CSS---------------------------*/
+
+/* Container for the search input fields and icons */
+.job-search-cls {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+    /* Style the input fields */
+    .job-search-cls input {
+        width: 100%;
+        padding: 10px;
+        padding-left: 40px; /* Space for the icon */
+        box-sizing: border-box;
+    }
+
+    /* Style the icons */
+    .job-search-cls i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+    }
+
+/* Style the suggestions dropdown */
+.autocomplete-suggestions {
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: #717b8a;
+    z-index: 1000;
+    width: calc(100% - 20px); /* Match input width minus padding */
+    top: 100%; /* Position below the input field */
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Style individual suggestion items */
+.autocomplete-suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+    /* Highlight suggestion items on hover */
+    .autocomplete-suggestion:hover {
+        background-color: #f0f0f0;
+    }
+
+/* Style the search button */
+.job-sbm-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .job-sbm-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Roadmap section styles */
+.roadmap {
+    padding: 20px;
+}
+
+.stage {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+    .stage h2 {
+        background: #0044cc;
+        color: #fff;
+        padding: 10px;
+        margin: 0 -15px;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .stage ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .stage li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+        .stage li:last-child {
+            border-bottom: none;
+        }
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .stage h2 {
+        font-size: 1.2em;
+    }
+}
