@@ -32,6 +32,18 @@ jobs:
   pool:
     name: Default
   steps:
+  - task: IISWebAppManagementOnMachineGroup@0
+    inputs:
+      IISDeploymentType: 'IISWebsite'
+      ActionIISWebsite: 'CreateOrUpdateWebsite'
+      WebsiteName: 'AzureWebsiteJobHunt'
+      WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot'
+      WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
+  - task: IISWebAppManagementOnMachineGroup@0
+    inputs:
+      IISDeploymentType: 'IISWebsite'
+      ActionIISWebsite: 'StartWebsite'
+      StartStopWebsiteName: 'AzureWebsiteJobHunt'
   - task: PowerShell@2
     inputs:
       targetType: 'inline'
