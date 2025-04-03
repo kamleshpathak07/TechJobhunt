@@ -1,0 +1,59 @@
+trigger:
+- main
+
+pool:
+  name: Default
+
+jobs:
+- job: Build
+  displayName: Build Job
+  steps:
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '8.x'
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+  - task: VSBuild@1
+    inputs:
+      solution: '**/*.sln'
+      msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)\\"'
+  - task: CopyFiles@2
+    inputs:
+      contents: '**/*.zip'
+      targetFolder: '$(build.artifactStagingDirectory)'
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(build.artifactStagingDirectory)'
+      ArtifactName: 'drop'
+
+- job: Deploy
+  displayName: Deploy to Local IIS
+  dependsOn: Build
+  pool:
+    name: Default
+  steps:
+  - task: PowerShell@2
+    inputs:
+      targetType: 'inline'
+      script: |
+        $websiteName = 'AzureWebsiteJobHunt'
+        $packagePath = '$(build.artifactStagingDirectory)/**/*.zip'
+        $appPoolName = 'BuildPipeline'
+
+        # Import the WebAdministration module
+        Import-Module WebAdministration
+
+        # Create the application pool if it doesn't exist
+        if (-not (Get-WebAppPoolState -Name $appPoolName -ErrorAction SilentlyContinue)) {
+            New-WebAppPool -Name $appPoolName
+        }
+
+        # Create the website if it doesn't exist
+        if (-not (Get-Website -Name $websiteName -ErrorAction SilentlyContinue)) {
+            New-Website -Name $websiteName -Port 80 -PhysicalPath "C:\inetpub\wwwroot\$websiteName" -ApplicationPool $appPoolName
+        }
+
+        # Deploy the package
+        Start-WebAppPool -Name $appPoolName
+        Expand-Archive -Path $packagePath -DestinationPath "C:\inetpub\wwwroot\$websiteName" -Force
+        Restart-WebAppPool -Name $appPoolName
